@@ -6,16 +6,20 @@ import {
     Button,
     Input,
     InputLabel,
-    LabelButton
+    ButtonLabel
 } from '../components/register-customer-email/styled-components'
+import { Constants } from '../config/constants'
 
-const Root: React.FC = () => {
+const RegisterCustomerEmail: React.FC = () => {
     const closeWebView: () => void = () => {
-        emit({ type: 'success', data: { closeWebView: true } })
+        emit({ type: Constants.success, data: { closeWebView: true } })
     }
 
     const saveUser: () => void = () => {
-        emit({ type: 'success', data: { name, email } })
+        emit({
+            type: Constants.success,
+            data: { name, email, id: Math.random().toString() }
+        })
         closeWebView()
     }
 
@@ -39,10 +43,10 @@ const Root: React.FC = () => {
                 }
                 placeholder="Type your email..."></Input>
             <Button onClick={saveUser}>
-                <LabelButton>Save</LabelButton>
+                <ButtonLabel>Save</ButtonLabel>
             </Button>
             <Button onClick={closeWebView}>
-                <LabelButton>Cancel</LabelButton>
+                <ButtonLabel>Cancel</ButtonLabel>
             </Button>
         </div>
     )
@@ -50,8 +54,6 @@ const Root: React.FC = () => {
 
 const style: CSS.Properties = {
     backgroundColor: colors.light,
-    height: '100%',
-    flex: '1',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -59,4 +61,4 @@ const style: CSS.Properties = {
     padding: '5%'
 }
 
-export default webViewRender(<Root />)
+export default webViewRender(<RegisterCustomerEmail />)

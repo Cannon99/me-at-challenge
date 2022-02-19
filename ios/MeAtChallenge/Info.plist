@@ -69,6 +69,16 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>RedHatMono-Bold.ttf</string>
+		<string>RedHatMono-BoldItalic.ttf</string>
+		<string>RedHatMono-Italic.ttf</string>
+		<string>RedHatMono-Light.ttf</string>
+		<string>RedHatMono-LightItalic.ttf</string>
+		<string>RedHatMono-Medium.ttf</string>
+		<string>RedHatMono-MediumItalic.ttf</string>
+		<string>RedHatMono-Regular.ttf</string>
+		<string>RedHatMono-SemiBold.ttf</string>
+		<string>RedHatMono-SemiBoldItalic.ttf</string>
 	</array>
 </dict>
 </plist>

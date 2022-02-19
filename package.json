@@ -24,6 +24,7 @@
         "react-native-elements": "^3.4.2",
         "react-native-react-bridge": "^0.10.0",
         "react-native-safe-area-context": "^3.4.1",
+        "react-native-shadow-cards": "^1.0.2",
         "react-native-svg": "^12.1.1",
         "react-native-vector-icons": "^9.1.0",
         "react-native-webview": "^11.17.2"

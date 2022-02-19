@@ -4,12 +4,12 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { Header as HeaderComponent } from 'react-native-elements'
 import { HeaderAppProps } from '../../models/props/HeaderAppProps'
-import { colors } from '../../theme/styles'
+import { colors, fonts } from '../../theme/styles'
 
 const Header: (props: HeaderAppProps) => JSX.Element = (
     props: HeaderAppProps
 ) => {
-    const leftIcon: () => Element = () => (
+    const leftIcon: () => JSX.Element = () => (
         <View style={styles.containerData}>
             <FontAwesomeIcon
                 style={styles.icon}
@@ -24,7 +24,7 @@ const Header: (props: HeaderAppProps) => JSX.Element = (
             style={styles.containerStyle}
             containerStyle={styles.containerStyle}
             elevated={true}
-            backgroundColor={colors.wine}
+            backgroundColor={colors.primary}
             leftComponent={leftIcon()}
             centerComponent={
                 <View style={styles.containerData}>
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     title: {
         color: colors.light,
         fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'left'
+        textAlign: 'left',
+        fontFamily: fonts.primary
     },
     containerData: {
         paddingVertical: 10,

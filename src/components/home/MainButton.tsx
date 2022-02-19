@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { MainButtonProps } from '../../models/props/MainButtonProps'
-import { colors } from '../../theme/styles'
+import { colors, fonts } from '../../theme/styles'
 
 const MainButton: (props: MainButtonProps) => JSX.Element = (
     props: MainButtonProps
@@ -18,13 +18,14 @@ const MainButton: (props: MainButtonProps) => JSX.Element = (
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: colors.wine,
-        borderRadius: 10
+        backgroundColor: colors.primary,
+        borderRadius: 10,
+        marginBottom: 15
     },
     text: {
         padding: 20,
-        color: 'white',
-        fontWeight: 'bold'
+        color: colors.light,
+        fontFamily: fonts.primary
     }
 })
 
